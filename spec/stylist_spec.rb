@@ -22,7 +22,21 @@ describe(Stylist) do
       stylist1.save()
       expect(Stylist.all()).to(eq([stylist1]))
     end
-  end    
+  end
+
+  describe("#id") do
+    it("lets you read the id for a stylist") do
+      stylist1 = Stylist.new(:stylist_name => "Skip Dundy", :id => 1)
+      expect(stylist1.id()).to(eq(1))
+    end
+  end
+
+  describe("#stylist") do
+    it("lets you read the id for a stylist") do
+      stylist1 = Stylist.new(:stylist_name => "Skip Dundy", :id => 13)
+      expect(stylist1.id()).to(eq(13))
+    end
+  end
 
 
 end
