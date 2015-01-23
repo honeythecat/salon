@@ -17,7 +17,7 @@ describe(Client) do
 
   describe("#save") do
     it("adds a client to the array of saved clients") do
-      client1 = Client.new({:client_name => "Fred Thompson", :stylist_id => nil})
+      client1 = Client.new({:client_name => "Fred Thompson", :stylist_id => 1})
       client1.save()
       expect(Client.all()).to(eq([client1]))
     end

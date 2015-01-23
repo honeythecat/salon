@@ -48,6 +48,17 @@ describe(Stylist) do
     end
   end
 
+  describe("#clients") do
+    it("returns an array of clients for that stylist") do
+      stylist1 = Stylist.new({:stylist_name => "Skip Dundy", :id => nil})
+      stylist1.save()
+      client1 = Client.new({:client_name => "George C. Tilyou", :stylist_id => stylist1.id()})
+      client1.save()
+      client2 = Client.new({:client_name => "Fred Thompson", :stylist_id => stylist1.id()})
+      client2.save()
+      expect(stylist1.clients()).to(eq([client1, client2]))
+    end
+  end
 
 
 end
