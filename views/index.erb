@@ -1,0 +1,26 @@
+<h1>Coney Island Hair Salon</h1>
+
+</br>
+
+
+<ul>
+  <% @stylists.each() do |stylist| %>
+  <li><%= stylist.stylist_name() %></li>
+  <% end %>
+</ul>
+
+<form action="/tasks" method="post">
+  <label for="stylist_name">Hire a new stylist:</label>
+  <input id="stylist_name" name="stylist_name" type="text" placeholder="Name">
+
+  <button type="submit">Add Stylist</button>
+</form>
+
+</br>
+
+<p>Your fabulous stylists are:</p>
+
+
+
+
+</ul>
