@@ -25,4 +25,5 @@ class Client
     DB.exec("INSERT INTO clients (client_name) VALUES ('#{@client_name}');")
   end
 
+  
 end
