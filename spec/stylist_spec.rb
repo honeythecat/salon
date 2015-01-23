@@ -16,5 +16,13 @@ describe(Stylist) do
     end
   end
 
+  describe("#save") do
+    it("adds a stylist to the array of saved stylists") do
+      stylist1 = Stylist.new(:stylist_name => "Skip Dundy", :id => nil)
+      stylist1.save()
+      expect(Stylist.all()).to(eq([stylist1]))
+    end
+  end    
+
 
 end
