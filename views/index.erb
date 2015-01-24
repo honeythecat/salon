@@ -2,25 +2,21 @@
 
 </br>
 
-
-<ul>
-  <% @stylists.each() do |stylist| %>
-  <li><%= stylist.stylist_name() %></li>
-  <% end %>
-</ul>
-
-<form action="/tasks" method="post">
+<form action="/stylists" method="post">
   <label for="stylist_name">Hire a new stylist:</label>
   <input id="stylist_name" name="stylist_name" type="text" placeholder="Name">
 
   <button type="submit">Add Stylist</button>
 </form>
 
-</br>
+<% if @stylists.any?() %>
+  <p>Click on a stylist to see their clients:</p>
 
-<p>Your fabulous stylists are:</p>
-
-
-
-
-</ul>
+  <ul>
+    <% @stylists.each() do |stylist| %>
+    <li><a href="/stylists/<%= stylist.id() %>"><%= stylist.stylist_name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You haven't hired any stylists yet!</p>
+<% end %>
