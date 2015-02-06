@@ -12,9 +12,9 @@ In order to run your Salon Owner's Directory you need to run bundle and make
 sure that you have the Sinatra server running and open in your browser. You will
 also need to create a postgres database
 
-CREATE DATABASE salon;
-CREATE TABLE stylists (id serial PRIMARY KEY, stylist_name varchar)
-CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, stylist_id int)
+	CREATE DATABASE salon;
+	CREATE TABLE stylists (id serial PRIMARY KEY, stylist_name varchar);
+	CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, stylist_id int);
 
 Known bugs as of 1/23/15:
 Index.erb currently won't join correctly to stylists.erb
