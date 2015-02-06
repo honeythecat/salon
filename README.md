@@ -16,11 +16,12 @@ You will need to create a postgres database:
 	CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, stylist_id int);
 	
 In your terminal inside this project folder:
+	
 	gem install bundle
 	bundle
 	ruby app.rb
 	Go to http://localhost:3000 in your browser
-	Cross your fingers, click your heels...and theoretically you should now to able to use Coney Island Salon Owner's Directory!
+	Cross your fingers, click your heels...and theoretically you should now to able to use Coney Island Salon 		Owner's Directory!
 	
 Known bugs as of 2/6/15:
 No known bugs.
