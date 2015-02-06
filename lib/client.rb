@@ -6,6 +6,7 @@ class Client
     @stylist_id = attributes[:stylist_id]
   end
 
+	#At some point you should see if you can clean up this method.
   define_method(:==) do |another_client|
     self.client_name().==(another_client.client_name()).&(self.stylist_id().==(another_client.stylist_id()))
   end

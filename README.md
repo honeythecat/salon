@@ -1,25 +1,30 @@
 README
 
-Salon Owner's Directory description: If you own your own salon that happens to be
+This is a simple app called Coney Island Salon Owner's Directory. If you own your own salon that happens to be
 called Coney Island Salon, then this app is for you!! It will allow you to add
 stylists to your database, list your stylists, and add clients to each stylist.
 It's almost as fun as playing Oregon Trail!
 
-Ruby version: 2.1.5
+Ruby version: 2.1.1
 
-How to run the program:
-In order to run your Salon Owner's Directory you need to run bundle and make
-sure that you have the Sinatra server running and open in your browser. You will
-also need to create a postgres database
+Setup:
+
+You will need to create a postgres database:
 
 	CREATE DATABASE salon;
 	CREATE TABLE stylists (id serial PRIMARY KEY, stylist_name varchar);
 	CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, stylist_id int);
-
-Known bugs as of 1/23/15:
-Index.erb currently won't join correctly to stylists.erb
+	
+In your terminal inside this project folder:
+	gem install bundle
+	bundle
+	ruby app.rb
+	Go to http://localhost:3000 in your browser
+	Cross your fingers, click your heels...and theoretically you should now to able to use Coney Island Salon Owner's Directory!
+	
+Known bugs as of 2/6/15:
+No known bugs.
 
 Heather Anderson. MIT License. Copyright 2015. Created by Heather Anderson. Email: heather@thisisnotanorg.org
 
-Note to self: DUDE! YOU'VE ALMOST GOT THIS DOWN! KEEP BEING POSITIVE AND WEAR YOUR
-PITH HELMET MORE OFTEN!!
+Note to self: Wow! It didn't take you all day to finish your app; see this as the accomplishment it truly is.

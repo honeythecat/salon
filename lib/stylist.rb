@@ -17,14 +17,14 @@ class Stylist
     stylists
   end
 
-	#clean up this method's language once you get everything working
+	#At some point you should see if you can clean up this method.
   def save
     result = DB.exec("INSERT INTO stylists (stylist_name) VALUES ('#{@stylist_name}') RETURNING id;")
 		@id = result.first().fetch('id').to_i()
   end
 
 
-	#clean up this method's language once you get everything working	
+	#At some point you should see if you can clean up this method.
 	define_method(:==) do |another_stylist|
     self.stylist_name().==(another_stylist.stylist_name()).&(self.id().==(another_stylist.id()))
   end
