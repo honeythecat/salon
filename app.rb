@@ -17,9 +17,9 @@ end
 post '/clients' do
   client_name = params['client_name']
   stylist_id = params['stylist_id'].to_i
-  client = Client.new({ client_name: client_name, stylist_id: stylist_id })
-  client.save
-  @stylist = Stylist.find(id)
+  @client = Client.new({ client_name: client_name, stylist_id: stylist_id })
+  @client.save
+  @stylist = Stylist.find('id')
 	redirect "/stylists/#{stylist_id}"
 end
 
@@ -33,5 +33,10 @@ end
 
 get '/stylists/:id' do
   @stylist = Stylist.find(params['id'].to_i)
-  erb :stylists
+  erb :stylist
+end
+
+get '/clients/:id' do
+	@client_name = Client.find(params['id'])
+	redirect "/stylists/#{stylist_id}"
 end

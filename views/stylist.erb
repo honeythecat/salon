@@ -1,10 +1,12 @@
-<h1>Add a client to <%= @stylist.stylist_name() %> </h1>
+<h1>Add a client for <%= @stylist.stylist_name() %>:</h1>
 
-<form action="/stylists" method="post">
+<hr>
+
+<form action="/clients" method="post">
   <input id="stylist_id" name="stylist_id" type="hidden" value="<%= @stylist.id() %>">
 
-  <label for="client_name">List of clients:</label>
-  <input id="client_name" name="client_name" type="text" placeholder:"Name">
+  <label for="client_name">Client name:</label>
+  <input id="client_name" name="client_name" type="text" placeholder="ex. Dean Martin">
 
 
   <button type="submit">Add Client</button>
@@ -21,5 +23,7 @@
 <% else %>
   <p>There are no clients yet!</p>
 <% end %>
+
+<hr>
 
 <a href="/">Return to Coney Island Salon!</a>
