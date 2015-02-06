@@ -17,14 +17,16 @@ class Stylist
     stylists
   end
 
+	#clean up this method's language once you get everything working
   def save
     result = DB.exec("INSERT INTO stylists (stylist_name) VALUES ('#{@stylist_name}') RETURNING id;")
-    @id = result.first().['id'].to_i
+		@id = result.first().fetch('id').to_i()
   end
 
 
-  def == (another_stylist)
-    self.stylist_name() == (another_stylist.stylist_name()) & (self.id() == (another_stylist.id()))
+	#clean up this method's language once you get everything working	
+	define_method(:==) do |another_stylist|
+    self.stylist_name().==(another_stylist.stylist_name()).&(self.id().==(another_stylist.id()))
   end
 
 	def self.find(id)

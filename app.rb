@@ -20,7 +20,7 @@ post '/clients' do
   client = Client.new({ client_name: client_name, stylist_id: stylist_id })
   client.save
   @stylist = Stylist.find(id)
-  erb :stylists
+	redirect "/stylists/#{stylist_id}"
 end
 
 post '/stylists' do

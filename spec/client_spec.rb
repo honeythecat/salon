@@ -4,7 +4,7 @@ describe Client do
   describe '#==' do
     it 'is the same client if it has the same client name' do
       client1 = Client.new({ client_name: "Fred Thompson", stylist_id: nil })
-      client2 = Client.new({ client_name: "Fred Thompson", :stylist_id: nil })
+      client2 = Client.new({ client_name: "Fred Thompson", stylist_id: nil })
       expect(client1).to eq(client2)
     end
   end
